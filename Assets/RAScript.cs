@@ -17,9 +17,12 @@ public class RAScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(hex.transform.GetChild(0).gameObject.activeSelf){
         if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began){
             GameObject obj = Instantiate(objectToSpawn, hex.transform.position, hex.transform.rotation);
+            Destroy(hex);
+            Destroy(this);
         }
-        
+        }
     }
 }
