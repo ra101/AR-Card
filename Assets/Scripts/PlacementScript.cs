@@ -12,7 +12,7 @@ public class PlacementScript : MonoBehaviour
     private GameObject HexPlane;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         // Get the components
         rayManager = FindObjectOfType<ARRaycastManager>();
@@ -23,7 +23,7 @@ public class PlacementScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // Shoot a raycast from the center of the screen
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
@@ -39,7 +39,7 @@ public class PlacementScript : MonoBehaviour
             transform.rotation = hits[0].pose.rotation;
 
             // Enable the visual if it's disabled
-            if (!HexPlane.activeInHierarchy)
+            if (HexPlane && !HexPlane.activeInHierarchy)
             {
                 HexPlane.SetActive(true);
             }
