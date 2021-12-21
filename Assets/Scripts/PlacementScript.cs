@@ -1,3 +1,5 @@
+// ./Assets/Scripts/PlacementScript.cs
+
 using System.Collections.Generic;
 
 using UnityEngine;
@@ -8,12 +10,21 @@ using UnityEngine.XR.ARSubsystems;
 
 public class PlacementScript : MonoBehaviour
 {
+    /*
+
+    */
+
+    // Declaring Variables
     private ARRaycastManager rayManager;
     private GameObject HexPlane;
 
-    // Start is called before the first frame update
+    // Called before the first frame update
     private void Start()
     {
+        /*
+
+        */
+
         // Get the components
         rayManager = FindObjectOfType<ARRaycastManager>();
         HexPlane = transform.GetChild(0).gameObject;
@@ -22,9 +33,13 @@ public class PlacementScript : MonoBehaviour
         HexPlane.SetActive(false);
     }
 
-    // Update is called once per frame
+    // Called once per frame
     private void Update()
     {
+        /*
+
+        */
+
         // Shoot a raycast from the center of the screen
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
 

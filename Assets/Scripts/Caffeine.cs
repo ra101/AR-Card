@@ -1,7 +1,14 @@
-﻿using UnityEngine;
+﻿// ./Assets/Scripts/Caffeine.cs
+
+using UnityEngine;
+
 
 public class Caffeine : MonoBehaviour
 {
-    // Start is called before the first frame update
+    /*
+
+    */
+
+    // Called when the script instance is being loaded.
     private void Awake() => Screen.sleepTimeout = SleepTimeout.NeverSleep;
 }

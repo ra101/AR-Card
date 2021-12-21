@@ -1,3 +1,5 @@
+// ./Assets/Scripts/Spawner.cs
+
 using System.Collections;
 
 using UnityEngine;
@@ -5,18 +7,31 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    /*
 
+    */
+
+    // Declaring Variables
     public GameObject objectToSpawn;
     private PlacementScript PlacementIndicator;
 
+    // Called when the script instance is being loaded.
     private void Awake()
     {
+        /*
+
+        */
+
         PlacementIndicator = FindObjectOfType<PlacementScript>();
     }
 
-    // Update is called once per frame
+    // Called once per frame
     private void Update()
     {
+        /*
+
+        */
+
         if (PlacementIndicator.transform.childCount > 1)
         {
             if (PlacementIndicator.transform.GetChild(0).gameObject.activeSelf)
@@ -29,8 +44,13 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    // Called when
     private IEnumerator SpawnAnimationCoroutine()
     {
+        /*
+
+        */
+
         // Activate Electric Discharge
         PlacementIndicator.transform.GetChild(1).gameObject.SetActive(true);
 

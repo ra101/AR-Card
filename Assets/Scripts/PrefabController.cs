@@ -1,22 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿// ./Assets/Scripts/PrefabController.cs
+
+
+using System.Collections;
 using UnityEngine;
 
 
 public class PrefabController : MonoBehaviour
 {
+    /*
 
-    private Animator aniController;
-    private HelpText helpText;
+    */
+
+    // Declaring Variables
     private int zoomingLastFrameSemaphore;
     private bool zoomed, flicked;
     private Vector2[] lastZoomPositions;
-    private Camera ARCamera;
     private Vector2 touchPosition = default;
+    private Camera ARCamera;
+    private Animator aniController;
+    private HelpText helpText;
 
-    // Start is called before the first frame update
+    // Called before the first frame update
     private void Start()
     {
+        /*
+
+        */
+
         zoomingLastFrameSemaphore = 0;
 
         zoomed = false;
@@ -32,9 +42,13 @@ public class PrefabController : MonoBehaviour
         aniController.SetBool("flicked", flicked);
     }
 
-    // Update is called once per frame
+    // Called once per frame
     void Update()
     {
+        /*
+
+        */
+
         if (Input.touchCount == 2)
         {
             Vector2[] newPositions = new Vector2[] { Input.GetTouch(0).position, Input.GetTouch(1).position };

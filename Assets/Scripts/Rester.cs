@@ -1,17 +1,28 @@
-using System.Collections;
+// ./Assets/Scripts/Rester.cs
+
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Rester : MonoBehaviour
 {
-    public Rester otherRester;
+    /*
+
+    */
+
+    // Declaring Variables
     private bool activated;
     private List<Material> materials = new List<Material>();
     private GameObject info;
+    public Rester otherRester;
 
-    // Start is called before the first frame update
+    // Called when the script instance is being loaded.
     private void Awake()
     {
+        /*
+
+        */
+
         activated = false;
         info = transform.Find("info").gameObject;
         foreach (Transform child in transform.Find("LEDs"))
@@ -20,8 +31,13 @@ public class Rester : MonoBehaviour
         }
     }
 
+    // Called when
     public void Toggle()
     {
+        /*
+
+        */
+
         if (activated)
         {
             Deactivate();
@@ -32,8 +48,13 @@ public class Rester : MonoBehaviour
         }
     }
 
+    // Called when
     public void Deactivate()
     {
+        /*
+
+        */
+
         if (activated)
         {
             activated = false;
@@ -46,8 +67,13 @@ public class Rester : MonoBehaviour
         }
     }
 
+    // Called when
     public void Activate()
     {
+        /*
+
+        */
+
         activated = true;
         if (otherRester.activated)
         {
