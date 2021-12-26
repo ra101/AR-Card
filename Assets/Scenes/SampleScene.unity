@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 54281418}
   - component: {fileID: 54281417}
   - component: {fileID: 54281419}
+  - component: {fileID: 54281420}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -184,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlanePrefab: {fileID: 0}
-  m_DetectionMode: -1
+  m_DetectionMode: 1
 --- !u!114 &54281418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +215,22 @@ MonoBehaviour:
   m_EnvironmentTextureFilterMode: 2
   m_EnvironmentTextureHDR: 1
   m_DebugPrefab: {fileID: 0}
+--- !u!114 &54281420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54281414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b15f82cc229284894964d2d30806969d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HumanSegmentationStencilMode: 3
+  m_HumanSegmentationDepthMode: 2
+  m_EnvironmentDepthMode: 3
+  m_OcclusionPreferenceMode: 1
 --- !u!1 &223974226
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +451,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 421629619}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 1
@@ -6097,75 +6114,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470167910137206318}
   m_CullTransparentMesh: 0
---- !u!1001 &8801765852792206474
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 946664975567903104, guid: 0253d6a955b1803448225ad8f6e7d01a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 946664975567903104, guid: 0253d6a955b1803448225ad8f6e7d01a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 946664975567903104, guid: 0253d6a955b1803448225ad8f6e7d01a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 946664975567903104, guid: 0253d6a955b1803448225ad8f6e7d01a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 946664975567903104, guid: 0253d6a955b1803448225ad8f6e7d01a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 946664975567903104, guid: 0253d6a955b1803448225ad8f6e7d01a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 946664975567903104, guid: 0253d6a955b1803448225ad8f6e7d01a,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 946664975567903104, guid: 0253d6a955b1803448225ad8f6e7d01a,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 946664975567903104, guid: 0253d6a955b1803448225ad8f6e7d01a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 946664975567903104, guid: 0253d6a955b1803448225ad8f6e7d01a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 946664975567903104, guid: 0253d6a955b1803448225ad8f6e7d01a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6534939660717342493, guid: 0253d6a955b1803448225ad8f6e7d01a,
-        type: 3}
-      propertyPath: m_Name
-      value: PrefabWrapper
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0253d6a955b1803448225ad8f6e7d01a, type: 3}
 --- !u!224 &9098405943986230223
 RectTransform:
   m_ObjectHideFlags: 0
