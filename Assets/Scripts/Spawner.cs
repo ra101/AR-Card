@@ -62,8 +62,10 @@ public class Spawner : MonoBehaviour
         Instantiate(
             objectToSpawn,
 
-            // Adding height
-            PlacementIndicator.transform.position + new Vector3(0.0f, 0.225f + 0.116f, 0.0f),
+            // Offseting with object's height, if any
+            PlacementIndicator.transform.position + new Vector3(
+                0.0f, 0.0f, objectToSpawn.transform.position.y
+            ),
 
             // Cross-Multiplcation of 90deg in y-direction
             PlacementIndicator.transform.rotation * new Quaternion(1.0f, 0.0f, 1.0f, 0)

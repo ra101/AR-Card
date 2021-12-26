@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: AR Camera Profile
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: 3523858018647567939}
---- !u!114 &3523858018647567939
+  - {fileID: 5832059799571159173}
+--- !u!114 &5832059799571159173
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
