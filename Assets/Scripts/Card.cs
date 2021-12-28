@@ -32,15 +32,8 @@ public class Card : MonoBehaviour
         */
 
         // 60%
-        if (Random.Range(0, 5) < 3)
-        {
-            set1.SetActive(true);
-            set2.SetActive(false);
-        }
-        else
-        {
-            set1.SetActive(false);
-            set2.SetActive(true);
-        }
+        bool active = Random.Range(0, 5) < 3;
+        set1.SetActive(active);
+        set2.SetActive(!active);
     }
 }

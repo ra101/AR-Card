@@ -184,7 +184,7 @@ Material:
     - _StencilWriteMask: 255
     - _TRANSPARENCY: 0.36
     - _UVSec: 0
-    - _UseColorMap: 0
+    - _UseColorMap: 1
     - _UseEmissiveMap: 0
     - _UseMetallicMap: 0
     - _UseNormalMap: 0
@@ -201,7 +201,7 @@ Material:
     - _BASE_COLOR: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EMISSION_COLOR: {r: 0.8018868, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 6.8705883, g: 0.65882355, b: 0.7529412, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _REFLECTIONS_COLOR: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
