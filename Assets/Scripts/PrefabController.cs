@@ -97,7 +97,7 @@ public class PrefabController : MonoBehaviour
                     Link link = hitObject.transform.GetComponent<Link>();
                     if (link)
                     {
-                        Application.OpenURL(link.url);
+                        Application.OpenURL(link.URL);
                     };
                 }
 

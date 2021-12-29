@@ -39,8 +39,8 @@ public class Spawner : MonoBehaviour
     /// <summary>
     private void Spawn()
     {
-        /// Delete Hex Placement Marker
-        Destroy(PlacementIndicator.transform.GetChild(0).gameObject);
+        Animator aniController = PlacementIndicator.transform.GetChild(0).GetComponent<Animator>();
+        aniController.SetBool("spawned", true);
 
         Instantiate(
             objectToSpawn,
@@ -54,8 +54,6 @@ public class Spawner : MonoBehaviour
             PlacementIndicator.transform.rotation * new Quaternion(1.0f, 0.0f, 1.0f, 0)
         );
 
-        /// Clear Trash
-        Destroy(PlacementIndicator.gameObject);
         Destroy(this);
     }
 }

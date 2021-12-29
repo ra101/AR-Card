@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2574971972651303597}
   - component: {fileID: 4939545591606281920}
   - component: {fileID: 3597924373848832797}
-  - component: {fileID: 950305112073977075}
   m_Layer: 0
   m_Name: LED3
   m_TagString: Untagged
@@ -31,7 +30,7 @@ Transform:
   m_LocalScale: {x: 0.08, y: 0.01, z: 0.3}
   m_Children: []
   m_Father: {fileID: 662289556050059687}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4939545591606281920
 MeshFilter:
@@ -82,23 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &950305112073977075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18461686392200639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: faa0e2391e0b53640b8d9d250fb75ec2, type: 2}
 --- !u!1 &65291258406174496
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d512fc03c8ece64eb6c6cb5ca8b27c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: mailto:ra101.dev@protonmail.com
+  URL: mailto:ra101.dev@protonmail.com
 --- !u!1 &774512178245421493
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,7 +947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d512fc03c8ece64eb6c6cb5ca8b27c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: https://ra101.github.io/
+  URL: https://ra101.github.io
 --- !u!1 &1562664139438251811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,7 +1137,6 @@ GameObject:
   - component: {fileID: 3356645248424174333}
   - component: {fileID: 4394166510484139201}
   - component: {fileID: 8239762961408939261}
-  - component: {fileID: 8550606166319804986}
   m_Layer: 0
   m_Name: LED1
   m_TagString: Untagged
@@ -1175,7 +1156,7 @@ Transform:
   m_LocalScale: {x: 0.080000006, y: 0.080000006, z: 0.08}
   m_Children: []
   m_Father: {fileID: 662289556050059687}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4394166510484139201
 MeshFilter:
@@ -1226,23 +1207,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8550606166319804986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2446873642513806747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: 3878019ef287e744faf49cf5ded4ba6b, type: 2}
 --- !u!1 &2452522175110975045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,7 +1500,7 @@ Light:
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -7583,7 +7547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d512fc03c8ece64eb6c6cb5ca8b27c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: https://linkedin.com/in/agarwal-parth/
+  URL: https://linkedin.com/in/agarwal-parth/
 --- !u!1 &5029691508652184797
 GameObject:
   m_ObjectHideFlags: 0
@@ -7851,7 +7815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d512fc03c8ece64eb6c6cb5ca8b27c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: https://github.com/ra101/ra101/raw/core/Resume.pdf
+  URL: https://github.com/ra101/ra101/raw/core/Resume.pdf
 --- !u!1 &6398086448281430915
 GameObject:
   m_ObjectHideFlags: 0
@@ -17825,7 +17789,6 @@ GameObject:
   - component: {fileID: 3963496297366155909}
   - component: {fileID: 450071950261857653}
   - component: {fileID: 6940568721605168431}
-  - component: {fileID: 8202504330234170994}
   m_Layer: 0
   m_Name: LED2
   m_TagString: Untagged
@@ -17845,7 +17808,7 @@ Transform:
   m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children: []
   m_Father: {fileID: 662289556050059687}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &450071950261857653
 MeshFilter:
@@ -17896,23 +17859,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8202504330234170994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7713704121993175079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: 3878019ef287e744faf49cf5ded4ba6b, type: 2}
 --- !u!1 &7837272785097365426
 GameObject:
   m_ObjectHideFlags: 0
@@ -18368,7 +18314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d512fc03c8ece64eb6c6cb5ca8b27c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: https://github.com/ra101
+  URL: https://github.com/ra101
 --- !u!1 &8640073839086571514
 GameObject:
   m_ObjectHideFlags: 0
@@ -18520,7 +18466,7 @@ Light:
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -23473,9 +23419,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 3356645248424174333}
   - {fileID: 3963496297366155909}
   - {fileID: 2574971972651303597}
-  - {fileID: 3356645248424174333}
   m_Father: {fileID: 1984872661869709507}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23588,7 +23534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d512fc03c8ece64eb6c6cb5ca8b27c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: https://github.com/ra101/AR-Card
+  URL: https://github.com/ra101/AR-Card
 --- !u!1 &8842612184776449477
 GameObject:
   m_ObjectHideFlags: 0
@@ -23779,4 +23725,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d512fc03c8ece64eb6c6cb5ca8b27c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: https://t.me/ra_101
+  URL: https://t.me/ra_101

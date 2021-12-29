@@ -40,6 +40,6 @@ public class HelpText : MonoBehaviour
 
         button.GetComponent<RectTransform>().sizeDelta = new Vector2(width, 30);
         textArea.GetComponent<TextMeshProUGUI>().text = text;
-        aniController.Play("Base Layer.help_text");
+        aniController.Play("Base Layer.HelpText");
     }
 }
