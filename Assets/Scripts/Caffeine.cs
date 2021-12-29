@@ -3,12 +3,13 @@
 using UnityEngine;
 
 
+/// <summary>
+/// Caffeine blocks sleep-promoting receptors in your device.
+/// <summary>
 public class Caffeine : MonoBehaviour
 {
-    /*
-
-    */
-
-    // Called when the script instance is being loaded.
-    private void Awake() => Screen.sleepTimeout = SleepTimeout.NeverSleep;
+    /// <summary>
+    /// Sets Screen Timeout to Never.
+    /// <summary>
+    private void Start() => Screen.sleepTimeout = SleepTimeout.NeverSleep;
 }

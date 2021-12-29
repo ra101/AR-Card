@@ -3,7 +3,13 @@
 using UnityEngine;
 
 
-public class Link : MonoBehaviour { public string url = "https://ra101.github.io"; }
-/*
-This
-*/
+/// <summary>
+/// Container for public url.
+/// <summary>
+public class Link : MonoBehaviour
+{
+    /// <summary>
+    /// default: "https://ra101.github.io".
+    /// <summary>
+    public string url = "https://ra101.github.io";
+}

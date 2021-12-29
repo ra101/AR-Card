@@ -7,31 +7,21 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    /*
-
-    */
-
     // Declaring Variables
     public GameObject objectToSpawn;
     private PlacementScript PlacementIndicator;
 
-    // Called when the script instance is being loaded.
+    /// <summary>
+    /// Called when the script instance is being loaded.
+    /// <summary>
     private void Awake()
     {
-        /*
-
-        */
-
         PlacementIndicator = FindObjectOfType<PlacementScript>();
     }
 
-    // Called once per frame
+    /// Called once per frame
     private void Update()
     {
-        /*
-
-        */
-
         if (PlacementIndicator.transform.childCount > 0)
         {
             if (PlacementIndicator.transform.GetChild(0).gameObject.activeSelf)
@@ -44,29 +34,27 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    // Called when
+    /// <summary>
+    /// Called when
+    /// <summary>
     private void Spawn()
     {
-        /*
-
-        */
-
-        // Delete Hex Placement Marker
+        /// Delete Hex Placement Marker
         Destroy(PlacementIndicator.transform.GetChild(0).gameObject);
 
         Instantiate(
             objectToSpawn,
 
-            // Offseting with object's height, if any
+            /// Offseting with object's height, if any
             PlacementIndicator.transform.position + new Vector3(
                 0.0f, 0.0f, objectToSpawn.transform.position.y
             ),
 
-            // Cross-Multiplcation of 90deg in y-direction
+            /// Cross-Multiplcation of 90deg in y-direction
             PlacementIndicator.transform.rotation * new Quaternion(1.0f, 0.0f, 1.0f, 0)
         );
 
-        // Clear Trash
+        /// Clear Trash
         Destroy(PlacementIndicator.gameObject);
         Destroy(this);
     }
