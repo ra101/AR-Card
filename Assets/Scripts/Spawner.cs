@@ -32,29 +32,24 @@ public class Spawner : MonoBehaviour
 
         */
 
-        if (PlacementIndicator.transform.childCount > 1)
+        if (PlacementIndicator.transform.childCount > 0)
         {
             if (PlacementIndicator.transform.GetChild(0).gameObject.activeSelf)
             {
                 if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
                 {
-                    StartCoroutine(SpawnAnimationCoroutine());
+                    Spawn();
                 }
             }
         }
     }
 
     // Called when
-    private IEnumerator SpawnAnimationCoroutine()
+    private void Spawn()
     {
         /*
 
         */
-
-        // Activate Electric Discharge
-        PlacementIndicator.transform.GetChild(1).gameObject.SetActive(true);
-
-        yield return new WaitForSeconds(0.1f);
 
         // Delete Hex Placement Marker
         Destroy(PlacementIndicator.transform.GetChild(0).gameObject);
@@ -70,9 +65,6 @@ public class Spawner : MonoBehaviour
             // Cross-Multiplcation of 90deg in y-direction
             PlacementIndicator.transform.rotation * new Quaternion(1.0f, 0.0f, 1.0f, 0)
         );
-
-        // Wait for Electric Discharge to complete (1s)
-        yield return new WaitForSeconds(0.9f);
 
         // Clear Trash
         Destroy(PlacementIndicator.gameObject);
