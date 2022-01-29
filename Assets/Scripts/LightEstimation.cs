@@ -51,7 +51,7 @@ public class LightEstimation : MonoBehaviour
     /// <summary>
     private void OnDisable()
     {
-        dirLight.transform.rotation = ARCamManager.transform.rotation;
+        dirLight.transform.rotation = limitQuaternion(ARCamManager.transform.rotation);
         ARCamManager.frameReceived -= EstimateLight;
     }
 
@@ -91,10 +91,17 @@ public class LightEstimation : MonoBehaviour
         // Direction
         if (args.lightEstimation.mainLightDirection.HasValue)
         {
-            dirLight.transform.rotation = Quaternion.LookRotation(
-                args.lightEstimation.mainLightDirection.Value
+            dirLight.transform.rotation = limitQuaternion(
+                Quaternion.LookRotation(args.lightEstimation.mainLightDirection.Value)
             );
         }
+    }
+
+    private Quaternion limitQuaternion(Quaternion quad, float min = 30, float max = 150)
+    {
+        return Quaternion.Euler(
+            Vector3.Min(Vector3.Max(quad.eulerAngles, min * Vector3.one), max * Vector3.one)
+        );
     }
 
 }

@@ -8,7 +8,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     // Declaring Variables
-    public GameObject objectToSpawn;
+    public GameObject prefab, ARShadowPlane;
     private PlacementScript PlacementIndicator;
 
     /// <summary>
@@ -43,15 +43,23 @@ public class Spawner : MonoBehaviour
         aniController.SetBool("spawned", true);
 
         Instantiate(
-            objectToSpawn,
+            prefab,
 
             /// Offseting with object's height, if any
             PlacementIndicator.transform.position + new Vector3(
-                0.0f, 0.0f, objectToSpawn.transform.position.y
+                0.0f, 0.0f, prefab.transform.position.y
             ),
 
             /// Cross-Multiplcation of 90deg in y-direction
             PlacementIndicator.transform.rotation * new Quaternion(1.0f, 0.0f, 1.0f, 0)
+        );
+
+        Instantiate(
+            ARShadowPlane,
+            PlacementIndicator.transform.position + new Vector3(
+                0.01f, 0.01f, 0.01f
+            ),
+            PlacementIndicator.transform.rotation
         );
 
         Destroy(this);

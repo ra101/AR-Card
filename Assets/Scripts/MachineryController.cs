@@ -5,7 +5,7 @@ using System.Collections;
 using UnityEngine;
 
 
-public class PrefabController : MonoBehaviour
+public class MachineryController : MonoBehaviour
 {
     // Declaring Variables
     private int zoomingLastFrameSemaphore;
