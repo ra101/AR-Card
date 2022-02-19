@@ -11,6 +11,7 @@ public class Rester : MonoBehaviour
     private bool activated;
     private List<Material> materials = new List<Material>();
     private GameObject info;
+    private AudioSource ResterAudio;
     public Rester otherRester;
 
     /// <summary>
@@ -20,6 +21,7 @@ public class Rester : MonoBehaviour
     {
         activated = false;
         info = transform.Find("info").gameObject;
+        ResterAudio = GameObject.Find("ResterAudio").GetComponent<AudioSource>();
         foreach (Transform child in transform.Find("LEDs"))
         {
             materials.Add(child.GetComponent<Renderer>().material);
@@ -31,6 +33,8 @@ public class Rester : MonoBehaviour
     /// <summary>
     public void Toggle()
     {
+        ResterAudio.Play();
+
         if (activated)
         {
             Deactivate();
