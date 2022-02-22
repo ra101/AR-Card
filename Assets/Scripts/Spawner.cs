@@ -4,6 +4,8 @@ using System.Collections;
 
 using UnityEngine;
 
+using UnityEngine.XR.ARFoundation;
+
 
 public class Spawner : MonoBehaviour
 {
@@ -11,12 +13,15 @@ public class Spawner : MonoBehaviour
     public GameObject prefab, ARShadowPlane;
     private PlacementScript PlacementIndicator;
 
+    private ARPointCloudManager pointCloudManager;
+
     /// <summary>
     /// Called when the script instance is being loaded.
     /// <summary>
     private void Awake()
     {
         PlacementIndicator = FindObjectOfType<PlacementScript>();
+        pointCloudManager = FindObjectOfType<ARPointCloudManager>();
     }
 
     /// Called once per frame
@@ -62,6 +67,8 @@ public class Spawner : MonoBehaviour
             PlacementIndicator.transform.rotation
         );
 
+        pointCloudManager.SetTrackablesActive(false);
+        Destroy(pointCloudManager);
         Destroy(this);
     }
 }
