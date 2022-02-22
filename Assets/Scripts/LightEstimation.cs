@@ -97,11 +97,19 @@ public class LightEstimation : MonoBehaviour
         }
     }
 
-    private Quaternion limitQuaternion(Quaternion quad, float min = 30, float max = 150)
+    private Quaternion limitQuaternion(Quaternion quad)
     {
-        return Quaternion.Euler(
-            Vector3.Min(Vector3.Max(quad.eulerAngles, min * Vector3.one), max * Vector3.one)
-        );
-    }
+        float x = quad.eulerAngles.x, y = quad.eulerAngles.y, z = quad.eulerAngles.z;
 
+        // range allowed for `x` is [120, 240]
+        x = Mathf.Min(Mathf.Max(x, 120), 240);
+
+        // range allowed for `y` is [-60, 60] -> [0, 60] U [300, 360]
+        if (y <= 180)
+            y = Mathf.Min(y, 60);
+        else
+            y = Mathf.Max(y, 300);
+
+        return Quaternion.Euler(new Vector3(x, y, z));
+    }
 }
