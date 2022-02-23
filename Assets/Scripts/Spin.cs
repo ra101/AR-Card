@@ -1,8 +1,14 @@
 using UnityEngine;
 
+
+/// <summary>
+/// Rotates the attached <c>GameObject</c> in y-direction.
+/// </summary>
 public class Spin : MonoBehaviour
 {
-    // Update is called once per frame
+    /// <summary>
+    /// if active, update rotatation by a bit.
+    /// </summary>
     void Update()
     {
         if (this.gameObject.activeSelf)

@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+/// <summary>
+/// Interface for Toggling Rester
+/// </summary>
 public class Rester : MonoBehaviour
 {
     // Declaring Variables
@@ -15,13 +18,16 @@ public class Rester : MonoBehaviour
     public Rester otherRester;
 
     /// <summary>
-    /// Called when the script instance is being loaded.
-    /// <summary>
+    /// Initialize Variables
+    /// </summary>
     private void Awake()
     {
         activated = false;
         info = transform.Find("info").gameObject;
         ResterAudio = GameObject.Find("ResterAudio").GetComponent<AudioSource>();
+
+        // There are multiple LEDs, with same material,
+        // but once loaded, Each material acts independently...
         foreach (Transform child in transform.Find("LEDs"))
         {
             materials.Add(child.GetComponent<Renderer>().material);
@@ -29,8 +35,8 @@ public class Rester : MonoBehaviour
     }
 
     /// <summary>
-    /// Called when
-    /// <summary>
+    /// Switch states according <c>activated</c>, Audio must be played every time.
+    /// </summary>
     public void Toggle()
     {
         ResterAudio.Play();
@@ -46,8 +52,8 @@ public class Rester : MonoBehaviour
     }
 
     /// <summary>
-    /// Called when
-    /// <summary>
+    /// if <c>activated</c>: Disable Emission, InActivate <c>info</c>, Update GUI
+    /// </summary>
     public void Deactivate()
     {
         if (activated)
@@ -63,8 +69,8 @@ public class Rester : MonoBehaviour
     }
 
     /// <summary>
-    /// Called when
-    /// <summary>
+    /// Deactivate Other, Enable Emission, Activate <c>info</c>, Update GUI and <c>activated</c>
+    /// </summary>
     public void Activate()
     {
         activated = true;

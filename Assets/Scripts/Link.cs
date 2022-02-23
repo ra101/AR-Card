@@ -10,6 +10,6 @@ public class Link : MonoBehaviour
 {
     /// <summary>
     /// default: "https://ra101.github.io".
-    /// <summary>
+    /// </summary>
     public string URL = "https://ra101.github.io";
 }

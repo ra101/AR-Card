@@ -4,20 +4,20 @@ using UnityEngine;
 
 
 /// <summary>
-/// Override <c>OnEnable<c> to randomly enable of the the <c>set</c>.
-/// <summary>
+/// Override <c>OnEnable</c> to randomly enable of the the <c>set</c>.
+/// </summary>
 public class Card : MonoBehaviour
 {
     // Declaring Variables
 
     /// <summary>
     /// A <c>set</c> is collection of <c>name</c> and <c>pic</c>.
-    /// <summary>
+    /// </summary>
     private GameObject set1, set2;
 
     /// <summary>
     /// Initialize Sets.
-    /// <summary>
+    /// </summary>
     private void Awake()
     {
         set1 = transform.Find("set1").gameObject;
@@ -26,7 +26,7 @@ public class Card : MonoBehaviour
 
     /// <summary>
     /// Randomly enabling one set whilst disabling the other.
-    /// <summary>
+    /// </summary>
     private void OnEnable()
     {
         // 60% Chance of Set 1

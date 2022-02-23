@@ -5,11 +5,11 @@ using UnityEngine;
 
 /// <summary>
 /// Caffeine blocks sleep-promoting receptors in your device.
-/// <summary>
+/// </summary>
 public class Caffeine : MonoBehaviour
 {
     /// <summary>
     /// Sets Screen Timeout to Never.
-    /// <summary>
+    /// </summary>
     private void Start() => Screen.sleepTimeout = SleepTimeout.NeverSleep;
 }

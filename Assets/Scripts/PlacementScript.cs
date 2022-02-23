@@ -8,13 +8,18 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
 
+/// <summary>
+/// Display "Hex", if horizontal plane found.
+/// </summary>
 public class PlacementScript : MonoBehaviour
 {
     // Declaring Variables
     private ARRaycastManager rayManager;
     private GameObject HexPlane;
 
-    /// Called before the first frame update
+    /// <summary>
+    /// Initialize Variables
+    /// </summary>
     private void Start()
     {
         /// Get the components
@@ -25,7 +30,9 @@ public class PlacementScript : MonoBehaviour
         HexPlane.SetActive(false);
     }
 
-    /// Called once per frame
+    /// <summary>
+    /// Cast ray from screen, show "Hex", if horizontal plane found.
+    /// </summary>
     private void Update()
     {
         /// Shoot a raycast from the center of the screen

@@ -17,18 +17,18 @@ public class LightEstimation : MonoBehaviour
 
     /// <summary>
     /// ARCameraManager will produce frame events containing light estimation information.
-    /// <summary>
+    /// </summary>
     private ARCameraManager ARCamManager;
 
     /// <summary>
     /// Main Light of our scene.
-    /// <summary>
+    /// </summary>
     private Light dirLight;
 
 
     /// <summary>
     /// Initialize Variables.
-    /// <summary>
+    /// </summary>
     private void Awake()
     {
         dirLight = GetComponent<Light>();
@@ -38,7 +38,7 @@ public class LightEstimation : MonoBehaviour
     /// <summary>
     /// Set ARCamManagers rotation as Main Lights default rotation,
     /// Subscribe <c>EstimateLight</c> function to <c>frameReceived</c> event.
-    /// <summary>
+    /// </summary>
     private void OnEnable()
     {
         dirLight.transform.rotation = ARCamManager.transform.rotation;
@@ -48,7 +48,7 @@ public class LightEstimation : MonoBehaviour
     /// <summary>
     /// Set ARCamManagers rotation as Main Lights default rotation,
     /// Unsubscribe <c>EstimateLight</c> function from <c>frameReceived</c> event.
-    /// <summary>
+    /// </summary>
     private void OnDisable()
     {
         dirLight.transform.rotation = limitQuaternion(ARCamManager.transform.rotation);
@@ -59,7 +59,7 @@ public class LightEstimation : MonoBehaviour
     /// <summary>
     /// Update <c>Light</c> with the estimated value of main light of the physical environment, if available
     /// (calculated by <c>ARCameraManager</c>).
-    /// <summary>
+    /// </summary>
     private void EstimateLight(ARCameraFrameEventArgs args)
     {
         // Intensity
@@ -97,6 +97,9 @@ public class LightEstimation : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Limit <c>rotaion</c> of light, to limit shadow length
+    /// </summary>
     private Quaternion limitQuaternion(Quaternion quad)
     {
         float x = quad.eulerAngles.x, y = quad.eulerAngles.y, z = quad.eulerAngles.z;

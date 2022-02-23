@@ -7,6 +7,9 @@ using UnityEngine;
 using TMPro;
 
 
+/// <summary>
+/// Interface to start animation of HelpText DialogBox
+/// </summary>
 public class HelpText : MonoBehaviour
 {
     // Declaring Variables
@@ -14,8 +17,8 @@ public class HelpText : MonoBehaviour
     private Animator aniController;
 
     /// <summary>
-    /// Called when the script instance is being loaded.
-    /// <summary>
+    /// Initialize Variables
+    /// </summary>
     private void Awake()
     {
         button = transform.GetChild(0).gameObject;
@@ -24,16 +27,17 @@ public class HelpText : MonoBehaviour
     }
 
     /// <summary>
-    /// Called when
-    /// <summary>
+    /// Update DialogBox with <c>width</c> and <c>text</c>, then
+    /// Start Animation after <c>delay</c> second of delay
+    /// </summary>
     public void StartAnimation(float delay, float width, string text)
     {
         StartCoroutine(AnimationCoroutine(delay, width, text));
     }
 
     /// <summary>
-    /// Called when
-    /// <summary>
+    /// Coroutine for Help Text Animtation
+    /// </summary>
     private IEnumerator AnimationCoroutine(float delay, float width, string text)
     {
         yield return new WaitForSeconds(delay);

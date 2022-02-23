@@ -7,6 +7,9 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
 
+/// <summary>
+/// Spawns when Tapped
+/// </summary>
 public class Spawner : MonoBehaviour
 {
     // Declaring Variables
@@ -16,15 +19,17 @@ public class Spawner : MonoBehaviour
     private ARPointCloudManager pointCloudManager;
 
     /// <summary>
-    /// Called when the script instance is being loaded.
-    /// <summary>
+    /// Initiate Variables
+    /// </summary>
     private void Awake()
     {
         PlacementIndicator = FindObjectOfType<PlacementScript>();
         pointCloudManager = FindObjectOfType<ARPointCloudManager>();
     }
 
-    /// Called once per frame
+    /// <summary>
+    /// Spwan, if Tapped,
+    /// </summary>
     private void Update()
     {
         if (PlacementIndicator.transform.childCount > 0)
@@ -40,8 +45,9 @@ public class Spawner : MonoBehaviour
     }
 
     /// <summary>
-    /// Called when
-    /// <summary>
+    /// Places Machinery, ARShadowPlane
+    /// Disable PointClouds and Hex
+    /// </summary>
     private void Spawn()
     {
         Animator aniController = PlacementIndicator.transform.GetChild(0).GetComponent<Animator>();
@@ -68,7 +74,6 @@ public class Spawner : MonoBehaviour
         );
 
         pointCloudManager.SetTrackablesActive(false);
-        Destroy(pointCloudManager);
         Destroy(this);
     }
 }
