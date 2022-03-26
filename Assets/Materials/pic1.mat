@@ -212,7 +212,7 @@ Material:
     - _GlossyReflections: 1
     - _LightingEnabled: 0
     - _METALNESS: 1.6
-    - _Metallic: 2
+    - _Metallic: 1
     - _Mode: 0
     - _OPACITY: 1
     - _OcclusionStrength: 1
@@ -246,7 +246,7 @@ Material:
     - _TRANSPARENCY: 0
     - _UVSec: 0
     - _UseAoMap: 0
-    - _UseColorMap: 0
+    - _UseColorMap: 1
     - _UseEmissiveMap: 0
     - _UseMetallicMap: 0
     - _UseNormalMap: 0
@@ -267,7 +267,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _EMISSION_COLOR: {r: 1, g: 1, b: 1, a: 0}
-    - _EmissionColor: {r: 4.532898, g: 0.49675596, b: 0.43466145, a: 0}
+    - _EmissionColor: {r: 5.992157, g: 0.59607846, b: 0.65882355, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _REFLECTIONS_COLOR: {r: 1, g: 1, b: 1, a: 1}
     - _ReflectColor: {r: 1, g: 1, b: 1, a: 0.5}
