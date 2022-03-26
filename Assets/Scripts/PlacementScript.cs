@@ -16,6 +16,7 @@ public class PlacementScript : MonoBehaviour
     // Declaring Variables
     private ARRaycastManager rayManager;
     private GameObject HexPlane;
+    private Transform _transform;
 
     /// <summary>
     /// Initialize Variables
@@ -24,7 +25,8 @@ public class PlacementScript : MonoBehaviour
     {
         /// Get the components
         rayManager = FindObjectOfType<ARRaycastManager>();
-        HexPlane = transform.GetChild(0).gameObject;
+        _transform = this.transform;
+        HexPlane = _transform.GetChild(0).gameObject;
 
         /// Hide the placement indicator visual
         HexPlane.SetActive(false);
@@ -45,8 +47,8 @@ public class PlacementScript : MonoBehaviour
         /// If we hit an AR plane surface, update the position and rotation
         if (hits.Count > 0)
         {
-            transform.position = hits[0].pose.position;
-            transform.rotation = hits[0].pose.rotation;
+            _transform.position = hits[0].pose.position;
+            _transform.rotation = hits[0].pose.rotation;
 
             /// Enable the visual if it's disabled
             if (HexPlane && !HexPlane.activeInHierarchy)

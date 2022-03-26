@@ -17,6 +17,7 @@ public class Spawner : MonoBehaviour
     private PlacementScript PlacementIndicator;
 
     private ARPointCloudManager pointCloudManager;
+    private Transform placementIndicatorTransform;
 
     /// <summary>
     /// Initiate Variables
@@ -25,6 +26,7 @@ public class Spawner : MonoBehaviour
     {
         PlacementIndicator = FindObjectOfType<PlacementScript>();
         pointCloudManager = FindObjectOfType<ARPointCloudManager>();
+        placementIndicatorTransform = PlacementIndicator.transform;
     }
 
     /// <summary>
@@ -32,9 +34,9 @@ public class Spawner : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (PlacementIndicator.transform.childCount > 0)
+        if (placementIndicatorTransform.childCount > 0)
         {
-            if (PlacementIndicator.transform.GetChild(0).gameObject.activeSelf)
+            if (placementIndicatorTransform.GetChild(0).gameObject.activeSelf)
             {
                 if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
                 {

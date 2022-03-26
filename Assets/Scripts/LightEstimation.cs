@@ -24,6 +24,7 @@ public class LightEstimation : MonoBehaviour
     /// Main Light of our scene.
     /// </summary>
     private Light dirLight;
+    private Transform dirLightTransform;
 
 
     /// <summary>
@@ -33,6 +34,7 @@ public class LightEstimation : MonoBehaviour
     {
         dirLight = GetComponent<Light>();
         ARCamManager = FindObjectOfType<ARCameraManager>();
+        dirLightTransform = dirLight.transform;
     }
 
     /// <summary>
@@ -41,7 +43,7 @@ public class LightEstimation : MonoBehaviour
     /// </summary>
     private void OnEnable()
     {
-        dirLight.transform.rotation = ARCamManager.transform.rotation;
+        dirLightTransform.rotation = ARCamManager.transform.rotation;
         ARCamManager.frameReceived += EstimateLight;
     }
 
@@ -51,7 +53,7 @@ public class LightEstimation : MonoBehaviour
     /// </summary>
     private void OnDisable()
     {
-        dirLight.transform.rotation = limitQuaternion(ARCamManager.transform.rotation);
+        dirLightTransform.rotation = limitQuaternion(ARCamManager.transform.rotation);
         ARCamManager.frameReceived -= EstimateLight;
     }
 
@@ -91,7 +93,7 @@ public class LightEstimation : MonoBehaviour
         // Direction
         if (args.lightEstimation.mainLightDirection.HasValue)
         {
-            dirLight.transform.rotation = limitQuaternion(
+            dirLightTransform.rotation = limitQuaternion(
                 Quaternion.LookRotation(args.lightEstimation.mainLightDirection.Value)
             );
         }

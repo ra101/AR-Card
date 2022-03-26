@@ -6,14 +6,25 @@ using UnityEngine;
 /// </summary>
 public class Spin : MonoBehaviour
 {
+
+    private Transform _transform;
+    private GameObject _gameObject;
+
+    void Awake()
+    {
+        _transform = this.transform;
+        _gameObject = this.gameObject;
+    }
+
+
     /// <summary>
     /// if active, update rotatation by a bit.
     /// </summary>
     void Update()
     {
-        if (this.gameObject.activeSelf)
+        if (_gameObject.activeSelf)
         {
-            this.transform.Rotate(new Vector3(0, 0.5f, 0));
+            _transform.Rotate(new Vector3(0, 0.5f, 0));
         }
     }
 }
